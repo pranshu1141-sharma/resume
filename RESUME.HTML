@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pranshu Sharma - Computer Engineer | Embedded Systems, Automation & Electronics">
+    <title>Pranshu Sharma | Computer Engineer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+        .tail-container * {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+
+        .hero-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #00d4ff, #0099cc);
+            bottom: -6px;
+            left: 0;
+            border-radius: 9999px;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.15);
+        }
+
+        .profile-photo {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.03) rotate(2deg);
+            box-shadow: 0 30px 60px -15px rgb(0 212 255 / 0.3);
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="tail-container bg-zinc-950 text-zinc-200">
+
+    <!-- NAVBAR -->
+    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50 no-print">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                    PS</div>
+                <h1 class="hero-font text-2xl font-semibold tracking-tight">Pranshu Sharma</h1>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="nav-link hover:text-white">About</a>
+                <a href="#experience" class="nav-link hover:text-white">Experience</a>
+                <a href="#projects" class="nav-link hover:text-white">Projects</a>
+                <a href="#hackathons" class="nav-link hover:text-white">Hackathons</a>
+                <a href="#education" class="nav-link hover:text-white">Education</a>
+                <a href="#skills" class="nav-link hover:text-white">Skills</a>
+                <a href="#contact" class="nav-link hover:text-white">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/pranshu-sharma-pranshu03" target="_blank"
+                    class="flex items-center justify-center w-10 h-10 rounded-2xl hover:bg-zinc-900 text-zinc-400 hover:text-cyan-400">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+
+                <!-- Print button (mobile) -->
+                <button onclick="window.print()"
+                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-2xl hover:bg-zinc-900">
+                    <i class="fas fa-print"></i>
+                </button>
+
+                <!-- Mobile menu -->
+                <button onclick="toggleMobileMenu()"
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-2xl hover:bg-zinc-900 rounded-2xl">
+                    <i class="fas fa-bars" id="mobile-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 px-6 py-4">
+            <div class="flex flex-col gap-4 text-sm font-medium">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
+                <a href="#experience" onclick="toggleMobileMenu()" class="py-2">Experience</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="py-2">Projects</a>
+                <a href="#hackathons" onclick="toggleMobileMenu()" class="py-2">Hackathons</a>
+                <a href="#education" onclick="toggleMobileMenu()" class="py-2">Education</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="py-2">Skills</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION with your profile picture -->
+    <header class="max-w-6xl mx-auto px-6 pt-16 pb-20 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 rounded-3xl text-sm mb-6 border border-zinc-700">
+                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                Open to Opportunities • Mohali, Punjab
+            </div>
+
+            <h1 class="hero-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-4">
+                Pranshu Sharma
+            </h1>
+            <p class="text-3xl text-zinc-400 font-medium mb-6">Computer Engineer</p>
+
+            <p class="text-xl text-zinc-400 max-w-lg mb-10">
+                I am a passionate about programming, developing website and apps, embedded systems, automation, robotics
+                &amp; IoT.
+                I turn ideas into intelligent software and hardware solutions.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:pranshu1141@gmail.com"
+                    class="flex items-center gap-3 bg-white text-zinc-950 px-7 py-4 rounded-3xl font-semibold hover:scale-105">
+                    <i class="fas fa-envelope"></i>
+                    <span>Get in Touch</span>
+                </a>
+
+                <a href="tel:+919041601951"
+                    class="flex items-center gap-3 border border-zinc-700 hover:border-cyan-400 px-7 py-4 rounded-3xl font-medium">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9041601951</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/pranshu-sharma-pranshu03" target="_blank"
+                    class="flex items-center gap-3 border border-zinc-700 hover:border-cyan-400 px-7 py-4 rounded-3xl font-medium">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+
+            <div class="mt-12 flex items-center gap-8 text-sm">
+                <div>
+                    <span class="block text-zinc-500 text-xs tracking-widest">CURRENTLY</span>
+                    <span class="font-semibold">Building Intelligent Systems</span>
+                </div>
+                <div class="h-10 w-px bg-zinc-700"></div>
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-microchip text-cyan-400"></i>
+                        <span>Raspberry Pi</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-robot text-cyan-400"></i>
+                        <span>Robotics</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-plug text-cyan-400"></i>
+                        <span>PLC &amp; Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YOUR PROFILE PHOTO -->
+        <div class="flex-1 flex justify-center md:justify-end">
+            <div class="relative">
+                <img src="profile.jpg" alt="Pranshu Sharma"
+                    class="profile-photo w-80 h-80 md:w-[22rem] md:h-[22rem] object-cover rounded-3xl border-4 border-cyan-400 shadow-2xl shadow-cyan-500/30">
+
+                <div
+                    class="absolute -bottom-4 -right-4 bg-zinc-900 border border-cyan-400 text-cyan-400 text-xs font-mono px-4 py-2 rounded-3xl flex items-center gap-2 shadow-xl">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"></span>
+                    </span>
+                    OPEN TO WORK
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT / SUMMARY -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-4">
+                <span class="px-4 py-2 bg-cyan-400 text-zinc-950 font-semibold rounded-3xl text-sm">SUMMARY</span>
+                <h2 class="section-header text-4xl font-semibold tracking-tight mt-4">Engineering the Future</h2>
+            </div>
+            <div class="md:col-span-8 text-zinc-300 text-lg leading-relaxed">
+                Engineering student skilled in embedded systems, automation, and electronics.
+                Proficient in Python, SQL, and OOP, with hands-on experience in microcontrollers, PLCs, and PCB design.
+                Eager to apply technical skills to real-world engineering challenges.
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-900 border-t border-b border-zinc-800">
+        <div class="flex items-baseline gap-4 mb-12">
+            <span class="px-4 py-2 bg-emerald-400 text-zinc-950 font-semibold rounded-3xl text-sm">EXPERIENCE</span>
+            <h2 class="text-4xl font-semibold tracking-tight">Internship &amp; Professional Work</h2>
+        </div>
+
+        <div class="space-y-12">
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-3">
+                    <p class="text-emerald-400 font-medium">CSIO-CSIR Chandigarh</p>
+                    <p class="text-zinc-500">June 2024 — August 2024</p>
+                    <p class="text-sm mt-2 font-medium">INTERNSHIP • 2 months</p>
+                </div>
+                <div class="md:col-span-9">
+                    <h3 class="font-semibold text-xl mb-4">Automated Water Level Monitoring System</h3>
+                    <ul class="space-y-4 text-zinc-300">
+                        <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Engineered an
+                            automated water level monitoring system using Raspberry Pi and Python, enabling real-time
+                            tracking with &lt;1-second response time and 24/7 system uptime.</li>
+                        <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Integrated
+                            hardware sensors with a custom-built web platform, supporting remote monitoring for 50+
+                            users and reducing manual inspection efforts by 60%.</li>
+                        <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Programmed sensor
+                            interfaces and backend logic in Python, improving liquid level measurement accuracy by ~30%
+                            and reducing data processing latency.</li>
+                        <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Deployed an
+                            intelligent alert system that triggered instant notifications (&lt;2 seconds), decreasing
+                            response time to critical events by 40%.</li>
+                        <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Calibrated and
+                            optimized sensor performance through iterative testing and data validation, reducing
+                            measurement errors by 25%.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex items-baseline gap-4 mb-12">
+            <span class="px-4 py-2 bg-violet-400 text-zinc-950 font-semibold rounded-3xl text-sm">PROJECTS</span>
+            <h2 class="text-4xl font-semibold tracking-tight">Notable Projects</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold">Card Shuffling Machine</h3>
+                        <p class="text-cyan-400">ISTC CSIO-CSIR • Oct 2024 – Jan 2025</p>
+                    </div>
+                    <span class="px-3 py-1 text-xs font-mono bg-zinc-800 rounded-2xl">95%+ accuracy</span>
+                </div>
+                <ul class="space-y-3 text-zinc-300 text-[15px]">
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Engineered an
+                        automated card shuffling machine by integrating mechanical components with custom firmware.</li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Achieved consistent
+                        randomization with 95%+ shuffle accuracy and completed each cycle in under 10 seconds.</li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Designed
+                        user-friendly interface that reduced operator setup time by 40%.</li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Developed embedded
+                        control logic using microcontrollers to synchronize motor operations (+30% reliability).</li>
+                </ul>
+            </div>
+
+            <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold">Programmable Robotic Arm</h3>
+                        <p class="text-cyan-400">ISTC CSIO-CSIR • Jan 2025 – Mar 2025</p>
+                    </div>
+                    <span class="px-3 py-1 text-xs font-mono bg-zinc-800 rounded-2xl">±0.5 mm accuracy</span>
+                </div>
+                <ul class="space-y-3 text-zinc-300 text-[15px]">
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Devised a
+                        programmable robotic arm system merging advanced sensor arrays with precision actuator controls.
+                    </li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Achieved positional
+                        accuracy within ±0.5 mm and improved task efficiency by 35% in complex assembly operations.</li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Engineered custom
+                        motion algorithms that reduced movement time by 25% and increased system throughput by 30%.</li>
+                    <li class="flex gap-3"><span class="text-cyan-400 flex-shrink-0 mt-1">•</span> Integrated real-time
+                        feedback and control systems, reducing operational errors by 20%.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- HACKATHONS -->
+    <section id="hackathons" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-900 border-t border-b border-zinc-800">
+        <div class="flex items-baseline gap-4 mb-12">
+            <span class="px-4 py-2 bg-pink-400 text-zinc-950 font-semibold rounded-3xl text-sm">HACKATHONS</span>
+            <h2 class="text-4xl font-semibold tracking-tight">Hackathon Participation</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card-hover bg-zinc-950 border border-zinc-700 rounded-3xl p-8 flex flex-col h-full">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold mb-2">AI for Inclusion Hackathon</h3>
+                    <p class="text-pink-400 mb-6">Thapar Institute of Engineering and Technology</p>
+                    <div class="flex items-center gap-3 text-sm mb-8">
+                        <i class="fas fa-calendar-alt text-zinc-400"></i>
+                        <span class="font-medium">17 – 18 January 2026</span>
+                    </div>
+                    <p class="text-zinc-400 text-[15px]">Participated in the AI for Inclusion Hackathon, focusing on
+                        building inclusive AI solutions for real-world challenges.</p>
+                </div>
+                <div class="mt-auto pt-8 border-t border-zinc-700 text-xs font-mono flex justify-between items-center">
+                    <span class="px-3 py-1 bg-zinc-900 rounded-2xl">AI &amp; Inclusion</span>
+                    <span class="text-emerald-400">• Participant</span>
+                </div>
+            </div>
+
+            <div class="card-hover bg-zinc-950 border border-zinc-700 rounded-3xl p-8 flex flex-col h-full">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold mb-2">MAKEATHON Hackathon</h3>
+                    <p class="text-pink-400 mb-6">Thapar Institute of Engineering and Technology</p>
+                    <div class="flex items-center gap-3 text-sm mb-8">
+                        <i class="fas fa-calendar-alt text-zinc-400"></i>
+                        <span class="font-medium">21 – 22 February 2026</span>
+                    </div>
+                    <p class="text-zinc-400 text-[15px]">Participated in MAKEATHON, showcasing hardware prototyping and
+                        innovation skills in a fast-paced environment.</p>
+                </div>
+                <div class="mt-auto pt-8 border-t border-zinc-700 text-xs font-mono flex justify-between items-center">
+                    <span class="px-3 py-1 bg-zinc-900 rounded-2xl">Maker &amp; Hardware</span>
+                    <span class="text-emerald-400">• Participant</span>
+                </div>
+            </div>
+
+            <div class="card-hover bg-zinc-950 border border-zinc-700 rounded-3xl p-8 flex flex-col h-full">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold mb-2">HACKOWASP Hackathon</h3>
+                    <p class="text-pink-400 mb-6">Thapar Institute of Engineering and Technology</p>
+                    <div class="flex items-center gap-3 text-sm mb-8">
+                        <i class="fas fa-calendar-alt text-zinc-400"></i>
+                        <span class="font-medium">18 – 19 April 2026</span>
+                    </div>
+                    <p class="text-zinc-400 text-[15px]">Competed in HACKOWASP Hackathon, focusing on cybersecurity, web
+                        development, and innovative problem-solving.</p>
+                </div>
+                <div class="mt-auto pt-8 border-t border-zinc-700 text-xs font-mono flex justify-between items-center">
+                    <span class="px-3 py-1 bg-zinc-900 rounded-2xl">Cyber &amp; Web</span>
+                    <span class="text-emerald-400">• Participant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800">
+        <div class="flex items-baseline gap-4 mb-12">
+            <span class="px-4 py-2 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-sm">EDUCATION</span>
+            <h2 class="text-4xl font-semibold tracking-tight">Academic Background</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-zinc-950 border border-zinc-700 rounded-3xl p-8">
+                <p class="text-amber-400 font-medium text-sm">B.E. COMPUTER ENGINEERING</p>
+                <h3 class="text-xl font-semibold mt-2">Thapar University, Patiala</h3>
+                <p class="text-zinc-400">CGPA: 7.7</p>
+            </div>
+            <div class="bg-zinc-950 border border-zinc-700 rounded-3xl p-8">
+                <p class="text-amber-400 font-medium text-sm">DIPLOMA IN ELECTRONICS</p>
+                <h3 class="text-xl font-semibold mt-2">Indo-Swiss Training Centre, Chandigarh</h3>
+                <p class="text-emerald-400">2025 • CGPA: 8.5</p>
+            </div>
+            <div class="bg-zinc-950 border border-zinc-700 rounded-3xl p-8">
+                <p class="text-amber-400 font-medium text-sm">MATRICULATION</p>
+                <h3 class="text-xl font-semibold mt-2">St. Anne's Convent School, Chandigarh</h3>
+                <p class="text-emerald-400">2022 • CGPA: 8.4</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS &amp; COURSEWORK -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-20 bg-zinc-900 border-t border-b border-zinc-800">
+        <div class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-7">
+                <span class="px-4 py-2 bg-sky-400 text-zinc-950 font-semibold rounded-3xl text-sm">SKILLS</span>
+                <h2 class="text-4xl font-semibold tracking-tight mt-4 mb-8">Technical Expertise</h2>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-4 text-zinc-400 text-sm tracking-widest">PROGRAMMING</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Python</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">C++</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">C</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4 text-zinc-400 text-sm tracking-widest">WEB &amp; DATABASE</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">HTML</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">SQL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4 text-zinc-400 text-sm tracking-widest">CORE TECHNICAL</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">PLC</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Embedded
+                                Systems</span>
+                            <span
+                                class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Microcontrollers</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">PCB Design</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Automation</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4 text-zinc-400 text-sm tracking-widest">TOOLS &amp; OPERATIONS</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Arduino</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Pneumatics &amp;
+                                Hydraulics</span>
+                            <span class="px-5 py-2 bg-zinc-800 text-zinc-200 rounded-3xl text-sm">Machining (Lathe,
+                                Milling, Drilling)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="bg-zinc-950 border border-zinc-700 rounded-3xl p-8 h-full">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap"></i>
+                        Coursework &amp; Workshops
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center border-b border-zinc-700 pb-4">
+                            <div>Webinar on Pneumatics</div>
+                            <div class="text-zinc-400 text-sm">2024</div>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-zinc-700 pb-4">
+                            <div>Webinar on EV and Renewable Energy</div>
+                            <div class="text-zinc-400 text-sm">2024</div>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-zinc-700 pb-4">
+                            <div>Webinar on Electrical and Electronics Engineering</div>
+                            <div class="text-zinc-400 text-sm">2024</div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>Robotic Workshop</div>
+                            <div class="text-zinc-400 text-sm">ISTC CSIO-CSIR • 2022</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h4 class="font-semibold mb-3">Languages</h4>
+                        <div class="flex gap-4">
+                            <span class="flex-1 text-center bg-zinc-800 py-4 rounded-3xl">English</span>
+                            <span class="flex-1 text-center bg-zinc-800 py-4 rounded-3xl">हिंदी</span>
+                            <span class="flex-1 text-center bg-zinc-800 py-4 rounded-3xl">ਪੰਜਾਬੀ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-800">
+        <div class="text-center max-w-lg mx-auto">
+            <h2 class="text-5xl font-semibold tracking-tight mb-6">Let's Build Something Great Together</h2>
+            <p class="text-zinc-400 mb-10">I'm actively seeking opportunities in embedded systems, robotics, automation,
+                and IoT. Reach out!</p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:pranshu1141@gmail.com"
+                    class="flex-1 flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-6 rounded-3xl text-xl font-semibold">
+                    <i class="fas fa-paper-plane"></i>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/pranshu-sharma-pranshu03" target="_blank"
+                    class="flex-1 flex items-center justify-center gap-3 border-2 border-white px-8 py-6 rounded-3xl text-xl font-semibold">
+                    <i class="fab fa-linkedin"></i>
+                    Connect on LinkedIn
+                </a>
+            </div>
+
+            <p class="mt-12 text-sm text-zinc-500">Mohali, Punjab, India • pranshu1141@gmail.com • +91 9041601951</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 border-t border-zinc-800 text-center text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-6">
+            © 2026 Pranshu Sharma • Modern Resume Website
+            <br class="md:hidden">
+            <span class="mx-2 hidden md:inline">•</span>
+            Photo + LinkedIn + Hackathons • Fully responsive &amp; print-ready
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu')
+            const icon = document.getElementById('mobile-icon')
+            menu.classList.toggle('hidden')
+
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars')
+                icon.classList.add('fa-xmark')
+            } else {
+                icon.classList.remove('fa-xmark')
+                icon.classList.add('fa-bars')
+            }
+        }
+
+        console.log('%c✅ Full resume website ready with your profile picture!', 'color:#00d4ff; font-family:monospace; font-size:14px')
+    </script>
+</body>
+
+</html>
